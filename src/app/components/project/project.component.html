@@ -1,0 +1,18 @@
+<div class="project bg-[#1e1e1e]">
+  <section id="projects" class="py-16 px-4">
+    <h2 class="text-center text-3xl font-bold text-[#f97316] mb-8">Proyectos</h2>
+
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+    >
+      <project-card
+        *ngFor="let p of projects"
+        [title]="p.title"
+        [description]="p.description"
+        [github]="p.github"
+        [demo]="p.demo"
+        [imageUrl]="p.imageUrl"
+      />
+    </div>
+  </section>
+</div>
