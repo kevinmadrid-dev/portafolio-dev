@@ -1,0 +1,54 @@
+<div class="about bg-[#1e1e1e]">
+  <section id="about" class="w-full h-full px-16 py-12 text-white">
+    <h2 class="text-4xl font-bold text-[#f97316] mb-4">Sobre mí</h2>
+
+    <p class="w-full text-lg text-justify leading-relaxed">
+      Desarrollador Fullstack apasionado por construir
+      <span class="text-[#f97316] font-medium">
+        soluciones eficientes, limpias y bien pensadas.
+      </span>
+
+      <br />
+      Desde la lógica del backend hasta la experiencia del usuario, aplico
+      <span class="text-[#f97316] font-medium">buenas prácticas</span> y
+      <span class="text-[#f97316] font-medium">clean code</span> para diseñar
+      interfaces usables y
+      <span class="text-[#f97316] font-medium">sistemas robustos</span> que optimizan
+      procesos críticos de negocio.
+    </p>
+
+    <h3 class="text-3xl font-semibold text-[#f97316] text-center mt-16 mb-8">
+      Mis habilidades
+    </h3>
+
+    <div class="flex flex-col gap-6 items-center">
+      <!-- Fila 1 (4 íconos) -->
+      <div class="flex flex-wrap justify-center gap-4">
+        <ng-container *ngFor="let tech of skills.slice(0, 4)">
+          <skill-card [icon]="tech.icon" [label]="tech.name" />
+        </ng-container>
+      </div>
+
+      <!-- Fila 2 (5 íconos) -->
+      <div class="flex flex-wrap justify-center gap-4">
+        <ng-container *ngFor="let tech of skills.slice(4, 9)">
+          <skill-card [icon]="tech.icon" [label]="tech.name" />
+        </ng-container>
+      </div>
+
+      <!-- Fila 3 (4 íconos) -->
+      <div class="flex flex-wrap justify-center gap-4">
+        <ng-container *ngFor="let tech of skills.slice(9, 13)">
+          <skill-card [icon]="tech.icon" [label]="tech.name" />
+        </ng-container>
+      </div>
+
+      <!-- Fila 4 (6 íconos) -->
+      <div class="flex flex-wrap justify-center gap-4">
+        <ng-container *ngFor="let tech of skills.slice(13, 19)">
+          <skill-card [icon]="tech.icon" [label]="tech.name" />
+        </ng-container>
+      </div>
+    </div>
+  </section>
+</div>

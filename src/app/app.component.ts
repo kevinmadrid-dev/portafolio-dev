@@ -1,10 +1,11 @@
 import { Component } from "@angular/core"
 
 import { MainComponent } from "./components/main/main.component"
+import { AboutComponent } from "./components/about/about.component"
 
 @Component({
   selector: "app-root",
-  imports: [MainComponent],
+  imports: [MainComponent, AboutComponent],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css"
 })
