@@ -3,10 +3,10 @@ import { Component, Input } from "@angular/core"
 @Component({
   selector: "skill-card",
   imports: [],
-  templateUrl: "./card.component.html",
-  styleUrl: "./card.component.css"
+  templateUrl: "./skill-card.component.html",
+  styleUrl: "./skill-card.component.css"
 })
-export class CardComponent {
+export class SkillCardComponent {
   @Input() icon!: string
   @Input() label!: string
 }

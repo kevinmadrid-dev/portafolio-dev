@@ -1,11 +1,11 @@
 import { CommonModule } from "@angular/common"
 import { Component } from "@angular/core"
 
-import { CardComponent } from "../card/card.component"
+import { SkillCardComponent } from "../skill-card/skill-card.component"
 
 @Component({
   selector: "app-about",
-  imports: [CommonModule, CardComponent],
+  imports: [CommonModule, SkillCardComponent],
   templateUrl: "./about.component.html",
   styleUrl: "./about.component.css"
 })
