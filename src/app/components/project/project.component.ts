@@ -13,45 +13,45 @@ export class ProjectComponent {
   projects = [
     {
       title: "Proyecto 01",
-      description: "Proyecto de x cosa, hace tal cosa",
-      github: "https://github.com/kevin/proyecto-01",
-      demo: "https://proyecto01.vercel.app",
-      imageUrl: "assets/project.png"
+      description: "*Proyectos agregados proximamente",
+      github: "",
+      demo: "",
+      image: "assets/project.webp"
     },
     {
       title: "Proyecto 02",
-      description: "Otra app interesante",
-      github: "https://github.com/kevin/proyecto-02",
-      demo: "https://proyecto02.vercel.app",
-      imageUrl: "assets/project.png"
+      description: "*Proyectos agregados proximamente",
+      github: "",
+      demo: "",
+      image: "assets/project.webp"
     },
     {
       title: "Proyecto 03",
-      description: "Otra app interesante",
-      github: "https://github.com/kevin/proyecto-03",
-      demo: "https://proyecto03.vercel.app",
-      imageUrl: "assets/project.png"
+      description: "*Proyectos agregados proximamente",
+      github: "",
+      demo: "",
+      image: "assets/project.webp"
     },
     {
       title: "Proyecto 04",
-      description: "Otra app interesante",
-      github: "https://github.com/kevin/proyecto-04",
-      demo: "https://proyecto04.vercel.app",
-      imageUrl: "assets/project.png"
+      description: "*Proyectos agregados proximamente",
+      github: "",
+      demo: "",
+      image: "assets/project.webp"
     },
     {
       title: "Proyecto 05",
-      description: "Otra app interesante",
-      github: "https://github.com/kevin/proyecto-05",
-      demo: "https://proyecto05.vercel.app",
-      imageUrl: "assets/project.png"
+      description: "*Proyectos agregados proximamente",
+      github: "",
+      demo: "",
+      image: "assets/project.webp"
     },
     {
       title: "Proyecto 06",
-      description: "Otra app interesante",
-      github: "https://github.com/kevin/proyecto-06",
-      demo: "https://proyecto06.vercel.app",
-      imageUrl: "assets/project.png"
+      description: "*Proyectos agregados proximamente",
+      github: "",
+      demo: "",
+      image: "assets/project.webp"
     }
   ]
 }

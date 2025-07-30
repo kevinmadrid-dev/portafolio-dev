@@ -6,3 +6,16 @@ html {
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
+
+/* Estilos de autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #1e1e1e inset !important;
+  -webkit-text-fill-color: #9e9e9e !important;
+  font-family: "Poppins", sans-serif !important;
+  transition: background-color 9999s ease-in-out 0s;
+}

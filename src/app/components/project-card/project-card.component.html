@@ -1,11 +1,12 @@
 <div
-  class="relative group rounded-lg overflow-hidden shadow-md bg-neutral-900 border border-neutral-700 hover:cursor-pointer"
+  class="relative group overflow-hidden shadow-md bg-neutral-900 border border-neutral-700 rounded-lg hover:cursor-pointer"
 >
   <!-- Imagen -->
   <img
-    [src]="imageUrl"
+    [src]="image"
+    loading="lazy"
     alt="{{ title }}"
-    class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+    class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-110"
   />
 
   <!-- Overlay con detalles -->
@@ -18,7 +19,7 @@
       <a
         [href]="github"
         target="_blank"
-        class="flex items-center gap-1 border border-white text-white text-sm px-3 py-1 rounded transition-transform duration-200 ease-in-out hover:scale-105"
+        class="flex items-center gap-1 border border-white text-white text-sm px-3 py-1 rounded-md transition-transform duration-200 ease-in-out hover:scale-105"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +40,7 @@
       <a
         [href]="demo"
         target="_blank"
-        class="flex items-center gap-1 border border-[#f97316] text-[#f97316] text-sm px-3 py-1 rounded transition-transform duration-200 ease-in-out hover:scale-105"
+        class="flex items-center gap-1 border border-[#f97316] text-[#f97316] text-sm px-3 py-1 rounded-md transition-transform duration-200 ease-in-out hover:scale-105"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

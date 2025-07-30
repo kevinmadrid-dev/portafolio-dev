@@ -11,5 +11,5 @@ export class ProjectCardComponent {
   @Input() description!: string
   @Input() github!: string
   @Input() demo!: string
-  @Input() imageUrl!: string
+  @Input() image!: string
 }
