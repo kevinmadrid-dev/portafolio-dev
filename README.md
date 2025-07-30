@@ -1,8 +1,8 @@
 # 🌐 Portafolio Web – Kevin Madrid
 
-¡Bienvenido a mi portafolio personal! Este proyecto fue diseñado y desarrollado con el objetivo de presentar mis habilidades como desarrollador **Fullstack**, así como compartir algunos de los proyectos en los que he trabajado recientemente.
+¡Bienvenido a mi portafolio personal! Este proyecto fue diseñado y desarrollado con el objetivo de presentar mis habilidades como desarrollador **Fullstack**, así como compartir algunos de los proyectos en los que he trabajado.
 
-La idea fue construir una plataforma profesional, moderna, accesible y responsiva, que refleje tanto mi estilo visual como mis valores técnicos: **limpieza, eficiencia y atención al detalle**.
+La idea fue construir una plataforma profesional, moderna, accesible y responsiva, que refleje tanto mi estilo visual como mis habilidades técnicas.
 
 ---
 
@@ -13,7 +13,7 @@ La idea fue construir una plataforma profesional, moderna, accesible y responsiv
 - 🌍 Multilenguaje dinámico, Español e Inglés **(Aún en desarrollo)**.
 - 📬 Formulario de contacto funcional con EmailJS.
 - ⚡ Animaciones suaves y navegación fluida.
-- 🔐 Mejores prácticas de accesibilidad.
+- 🔐 Accesibilidad.
 
 ---
 
@@ -35,25 +35,25 @@ La idea fue construir una plataforma profesional, moderna, accesible y responsiv
 
 ## 🚀 Cómo instalar y ejecutar localmente
 
-↓ 1. Clonar el repositorio
+⭣ 1. Clonar el repositorio
 
 ```console
 git clone https://github.com/kevinmadrid-dev/portafolio-dev.git
 ```
 
-↓ 2. Entra a la carpeta del repositorio
+⭣ 2. Entra a la carpeta del repositorio
 
 ```console
 cd portfolio
 ```
 
-↓ 3. Instalar dependencias
+⭣ 3. Instalar dependencias
 
 ```console
 npm install
 ```
 
-↓ 4. Ejecutar en entorno de desarrollo
+⭣ 4. Ejecutar en entorno de desarrollo
 
 ```console
 ng serve
