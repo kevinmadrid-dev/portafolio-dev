@@ -9,7 +9,7 @@ La idea fue construir una plataforma profesional, moderna, accesible y responsiv
 ## ✨ Características
 
 - 🎨 Diseño minimalista y responsivo.
-- 🌗 Soporte para modo claro y oscuro **(Aún en desarrollo)**.
+- 🌗 Soporte para modo claro y oscuro.
 - 🌍 Multilenguaje dinámico, Español e Inglés **(Aún en desarrollo)**.
 - 📬 Formulario de contacto funcional con EmailJS.
 - ⚡ Animaciones suaves y navegación fluida.
@@ -22,6 +22,7 @@ La idea fue construir una plataforma profesional, moderna, accesible y responsiv
 - [Angular v.19](https://v19.angular.dev/overview)
 - [TailwindCSS v.4](https://tailwindcss.com/)
 - [EmailJS](https://www.emailjs.com/) ⭢ para el envío de correos
+- [@ngx-translate/core](https://github.com/ngx-translate/core) ⭢ para la traducción de textos
 - [Figma](https://figma.com/) ⭢ diseño de interfaz
 - [Vercel](https://vercel.com/) ⭢ despliegue del proyecto
 
