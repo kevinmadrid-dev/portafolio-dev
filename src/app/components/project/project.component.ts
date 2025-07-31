@@ -7,8 +7,7 @@ import { ProjectCardComponent } from "../project-card/project-card.component"
 @Component({
   selector: "app-project",
   imports: [CommonModule, ProjectCardComponent, TranslateModule],
-  templateUrl: "./project.component.html",
-  styleUrl: "./project.component.css"
+  templateUrl: "./project.component.html"
 })
 export class ProjectComponent {
   language: "es" | "en" = "es"

@@ -8,8 +8,7 @@ import emailjs from "@emailjs/browser"
 @Component({
   selector: "app-contact",
   imports: [CommonModule, FormsModule, TranslateModule],
-  templateUrl: "./contact.component.html",
-  styleUrl: "./contact.component.css"
+  templateUrl: "./contact.component.html"
 })
 export class ContactComponent {
   language: "es" | "en" = "es"
