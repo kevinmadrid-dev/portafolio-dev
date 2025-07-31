@@ -14,7 +14,6 @@ export class MainComponent {
 
   constructor(private translate: TranslateService) {
     this.translate.use(this.language).subscribe()
-    this.translate.use(this.language)
   }
 
   toggleLanguage() {

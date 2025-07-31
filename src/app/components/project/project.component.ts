@@ -15,7 +15,6 @@ export class ProjectComponent {
 
   constructor(private translate: TranslateService) {
     this.translate.use(this.language).subscribe()
-    this.translate.use(this.language)
   }
 
   toggleLanguage() {
