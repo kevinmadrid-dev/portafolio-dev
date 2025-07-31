@@ -1,0 +1,54 @@
+{
+  "navbar": {
+    "inicio": "Home",
+    "sobreMi": "About Me",
+    "proyectos": "Projects",
+    "contacto": "Contact",
+    "saludo": "Hi!",
+    "textBody1": "I'm",
+    "textBody2": "FullStack Developer",
+    "BtnContacto": "Contact",
+    "BtnDescargarCV": "Download CV"
+  },
+
+  "about": {
+    "sobre_mi": "About Me",
+    "text1": "Fullstack Developer passionate about building",
+    "text2": "efficient, clean, and well-thought-out solutions.",
+    "text3": "From backend logic to user experience, I apply",
+    "text4": "best practices and clean code",
+    "text5": "to design usable interfaces and",
+    "text6": "robust systems",
+    "text7": "that optimize critical business processes.",
+    "habilidades": "Skills"
+  },
+
+  "project": {
+    "proyectos": "Projects",
+    "title1": "Project 01",
+    "description1": "*Projects coming soon",
+    "title2": "Project 02",
+    "description2": "*Projects coming soon",
+    "title3": "Project 03",
+    "description3": "*Projects coming soon",
+    "title4": "Project 04",
+    "description4": "*Projects coming soon",
+    "title5": "Project 05",
+    "description5": "*Projects coming soon",
+    "title6": "Project 06",
+    "description6": "*Projects coming soon"
+  },
+
+  "contact": {
+    "titulo": "Do you want to work with me?",
+    "nombre": "Full Name",
+    "email": "Email",
+    "mensaje": "Message",
+    "mensajeAlerta": "Don't worry, I will contact you as soon as possible.",
+    "btnEnviar": "Send Message",
+    "textoConfirmacion": "Message sent successfully 🎉",
+    "textoError": "There was an error sending the message 😢",
+    "redesSociales": "My social networks",
+    "mensajeFooter": "Thank you for visiting my portfolio!"
+  }
+}

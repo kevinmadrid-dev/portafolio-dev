@@ -1,15 +1,28 @@
 import { CommonModule } from "@angular/common"
 import { Component } from "@angular/core"
+import { TranslateModule, TranslateService } from "@ngx-translate/core"
 
 import { SkillCardComponent } from "../skill-card/skill-card.component"
 
 @Component({
   selector: "app-about",
-  imports: [CommonModule, SkillCardComponent],
+  imports: [CommonModule, SkillCardComponent, TranslateModule],
   templateUrl: "./about.component.html",
   styleUrl: "./about.component.css"
 })
 export class AboutComponent {
+  language: "es" | "en" = "es"
+
+  constructor(private translate: TranslateService) {
+    this.translate.use(this.language).subscribe()
+    this.translate.use(this.language)
+  }
+
+  toggleLanguage() {
+    this.language = this.language === "es" ? "en" : "es"
+    this.translate.use(this.language)
+  }
+
   skills = [
     { name: "HTML", icon: "assets/icons/html.svg" },
     { name: "CSS", icon: "assets/icons/css.svg" },

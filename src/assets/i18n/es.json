@@ -1,0 +1,54 @@
+{
+  "navbar": {
+    "inicio": "Inicio",
+    "sobreMi": "Sobre Mí",
+    "proyectos": "Proyectos",
+    "contacto": "Contacto",
+    "saludo": "¡Hola!",
+    "textBody1": "Soy",
+    "textBody2": "Desarrollador FullStack",
+    "BtnContacto": "Contacto",
+    "BtnDescargarCV": "Descargar CV"
+  },
+
+  "about": {
+    "sobre_mi": "Sobre mí",
+    "text1": "Desarrollador Fullstack apasionado por construir",
+    "text2": "soluciones eficientes, limpias y bien pensadas.",
+    "text3": "Desde la lógica del backend hasta la experiencia del usuario, aplico",
+    "text4": "buenas prácticas y clean code",
+    "text5": "para diseñar interfaces usables y",
+    "text6": "sistemas robustos",
+    "text7": "que optimizan procesos críticos de negocio.",
+    "habilidades": "Habilidades"
+  },
+
+  "project": {
+    "proyectos": "Proyectos",
+    "title1": "Proyecto 01",
+    "description1": "*Proyectos agregados próximamente",
+    "title2": "Proyecto 02",
+    "description2": "*Proyectos agregados próximamente",
+    "title3": "Proyecto 03",
+    "description3": "*Proyectos agregados próximamente",
+    "title4": "Proyecto 04",
+    "description4": "*Proyectos agregados próximamente",
+    "title5": "Proyecto 05",
+    "description5": "*Proyectos agregados próximamente",
+    "title6": "Proyecto 06",
+    "description6": "*Proyectos agregados próximamente"
+  },
+
+  "contact": {
+    "titulo": "¿Te interesa trabajar conmigo?",
+    "nombre": "Nombres y apellidos",
+    "email": "Correo electrónico",
+    "mensaje": "Mensaje",
+    "mensajeAlerta": "No te preocupes, me pondré en contacto contigo lo más pronto posible.",
+    "btnEnviar": "Enviar",
+    "textoConfirmacion": "Mensaje enviado con éxito 🎉",
+    "textoError": "Hubo un error al enviar el mensaje 😢",
+    "redesSociales": "Mis redes sociales",
+    "mensajeFooter": "¡Gracias por visitar mi portafolio!"
+  }
+}

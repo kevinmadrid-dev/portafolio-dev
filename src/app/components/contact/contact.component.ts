@@ -1,16 +1,29 @@
 import { CommonModule } from "@angular/common"
 import { Component } from "@angular/core"
 import { FormsModule, NgForm } from "@angular/forms"
+import { TranslateModule, TranslateService } from "@ngx-translate/core"
 
 import emailjs from "@emailjs/browser"
 
 @Component({
   selector: "app-contact",
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: "./contact.component.html",
   styleUrl: "./contact.component.css"
 })
 export class ContactComponent {
+  language: "es" | "en" = "es"
+
+  constructor(private translate: TranslateService) {
+    this.translate.use(this.language).subscribe()
+    this.translate.use(this.language)
+  }
+
+  toggleLanguage() {
+    this.language = this.language === "es" ? "en" : "es"
+    this.translate.use(this.language)
+  }
+
   currentYear = new Date().getFullYear()
   isSent = false
   isError = false

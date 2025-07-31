@@ -8,7 +8,7 @@
           href="#home"
           class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
         >
-          Inicio
+          {{ "navbar.inicio" | translate }}
         </a>
       </li>
 
@@ -17,7 +17,7 @@
           href="#about"
           class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
         >
-          Sobre Mí
+          {{ "navbar.sobreMi" | translate }}
         </a>
       </li>
 
@@ -26,7 +26,7 @@
           href="#projects"
           class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
         >
-          Proyectos
+          {{ "navbar.proyectos" | translate }}
         </a>
       </li>
 
@@ -35,7 +35,7 @@
           href="#contact"
           class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
         >
-          Contacto
+          {{ "navbar.contacto" | translate }}
         </a>
       </li>
     </ul>
@@ -134,16 +134,16 @@
   </nav>
 
   <section
-    class="h-full flex flex-col md:flex-row items-center justify-between px-20"
+    class="body h-full flex flex-col md:flex-row items-center justify-between px-20"
   >
     <div class="w-full h-full text-white flex flex-col justify-center">
-      <p class="text-3xl font-medium">¡Hola!</p>
+      <p class="text-3xl font-medium">{{ "navbar.saludo" | translate }}</p>
 
       <h1 class="text-2xl sm:text-3xl font-medium mt-2">
-        Soy
+        {{ "navbar.textBody1" | translate }}
         <span class="text-[#f97316] text-4xl font-semibold">Kevin Madrid</span>,
         <br />
-        Desarrollador Fullstack.
+        {{ "navbar.textBody2" | translate }}.
       </h1>
 
       <div class="mt-6 flex gap-4">
@@ -151,7 +151,7 @@
           href="#contact"
           class="bg-[#f97316] text-white px-4 py-2 border border-transparent rounded-lg transition-all duration-200 hover:bg-transparent hover:text-[#f97316] hover:border-[#f97316]"
         >
-          Contacto
+          {{ "navbar.BtnContacto" | translate }}
         </a>
 
         <a
@@ -177,7 +177,7 @@
             <path d="M12 4l0 12" />
           </svg>
 
-          <span class="mx-1">Descargar CV</span>
+          <span class="mx-1">{{ "navbar.BtnDescargarCV" | translate }}</span>
         </a>
       </div>
     </div>

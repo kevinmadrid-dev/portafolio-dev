@@ -2,7 +2,7 @@
   <section class="px-10 pt-8 pb-4 text-white">
     <!-- Título -->
     <h2 class="text-3xl sm:text-3xl font-semibold text-center text-[#f97316] mb-10">
-      ¿Te interesa trabajar conmigo?
+      {{ "contact.titulo" | translate }}
     </h2>
 
     <!-- Formulario -->
@@ -16,7 +16,7 @@
           type="text"
           name="name"
           [(ngModel)]="form.name"
-          placeholder="Nombre y apellido"
+          [placeholder]="'contact.nombre' | translate"
           maxlength="25"
           required
           class="text-[#9E9E9E] bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition"
@@ -26,7 +26,7 @@
           type="email"
           name="email"
           ngModel
-          placeholder="tucorreo123@gmail.com"
+          [placeholder]="'contact.email' | translate"
           maxlength="25"
           required
           class="text-[#9E9E9E] bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition"
@@ -36,7 +36,7 @@
       <textarea
         name="message"
         ngModel
-        placeholder="Mensaje"
+        [placeholder]="'contact.mensaje' | translate"
         rows="1"
         maxlength="200"
         required
@@ -48,23 +48,23 @@
           type="submit"
           class="bg-[#f97316] text-white px-6 py-2 border border-[#f97316] rounded-md mb-8 transition-transform duration-200 ease-in-out hover:bg-transparent hover:scale-105 hover:cursor-pointer"
         >
-          Enviar
+          {{ "contact.btnEnviar" | translate }}
         </button>
       </div>
 
       <!-- Mensajes de éxito/error -->
       <div *ngIf="isSent" class="text-green-500 text-center">
-        Mensaje enviado con éxito 🎉
+        {{ "contact.textoConfirmacion" | translate }}
       </div>
 
       <div *ngIf="isError" class="text-red-500 text-center">
-        Hubo un error al enviar el mensaje 😢
+        {{ "contact.textoError" | translate }}
       </div>
     </form>
 
     <!-- Texto de confirmación -->
     <p class="text-center text-sm mt-4 text-gray-400">
-      Pierde cuidado, me pondré en contacto contigo lo más pronto posible.
+      {{ "contact.mensajeAlerta" | translate }}
     </p>
 
     <!-- Separador -->
@@ -74,7 +74,10 @@
 
     <!-- Redes sociales -->
     <div class="text-center">
-      <h3 class="text-3xl font-semibold text-[#f97316] mb-4">Mis redes sociales</h3>
+      <h3 class="text-3xl font-semibold text-[#f97316] mb-4">
+        {{ "contact.redesSociales" | translate }}
+      </h3>
+
       <div class="flex justify-center items-center gap-6 text-2xl">
         <a
           href="https://www.linkedin.com/in/kevinmadrid-dev/"
@@ -160,7 +163,7 @@
     <!-- Footer -->
     <div class="text-center mt-10">
       <p class="text-xl text-white font-medium p-2">
-        ¡Gracias por visitar mi portafolio!
+        {{ "contact.mensajeFooter" | translate }}
       </p>
 
       <p class="text-start text-sm text-white p-2">
