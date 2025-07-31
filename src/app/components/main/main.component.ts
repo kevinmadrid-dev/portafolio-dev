@@ -5,7 +5,8 @@ import { TranslateModule, TranslateService } from "@ngx-translate/core"
 @Component({
   selector: "app-main",
   imports: [CommonModule, TranslateModule],
-  templateUrl: "./main.component.html"
+  templateUrl: "./main.component.html",
+  styleUrl: "./main.component.css"
 })
 export class MainComponent {
   language: "es" | "en" = "es"

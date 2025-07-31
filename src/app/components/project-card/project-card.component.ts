@@ -4,7 +4,8 @@ import { TranslateModule, TranslateService } from "@ngx-translate/core"
 @Component({
   selector: "project-card",
   imports: [TranslateModule],
-  templateUrl: "./project-card.component.html"
+  templateUrl: "./project-card.component.html",
+  styleUrl: "./project-card.component.css"
 })
 export class ProjectCardComponent {
   language: "es" | "en" = "es"

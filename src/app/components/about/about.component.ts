@@ -7,7 +7,8 @@ import { SkillCardComponent } from "../skill-card/skill-card.component"
 @Component({
   selector: "app-about",
   imports: [CommonModule, SkillCardComponent, TranslateModule],
-  templateUrl: "./about.component.html"
+  templateUrl: "./about.component.html",
+  styleUrl: "./about.component.css"
 })
 export class AboutComponent {
   language: "es" | "en" = "es"
