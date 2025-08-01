@@ -1,6 +1,8 @@
 import { CommonModule } from "@angular/common"
-import { Component } from "@angular/core"
+import { Component, Input } from "@angular/core"
+
 import { TranslateModule, TranslateService } from "@ngx-translate/core"
+import { trigger, transition, style, animate } from "@angular/animations"
 
 import { SkillCardComponent } from "../skill-card/skill-card.component"
 
@@ -8,18 +10,27 @@ import { SkillCardComponent } from "../skill-card/skill-card.component"
   selector: "app-about",
   imports: [CommonModule, SkillCardComponent, TranslateModule],
   templateUrl: "./about.component.html",
-  styleUrl: "./about.component.css"
+  styleUrl: "./about.component.css",
+  animations: [
+    trigger("fadeLangChange", [
+      transition("es => en", [
+        style({ opacity: 0 }),
+        animate("300ms ease-in", style({ opacity: 1 }))
+      ]),
+      transition("en => es", [
+        style({ opacity: 0 }),
+        animate("300ms ease-in", style({ opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class AboutComponent {
-  language: "es" | "en" = "es"
+  @Input() language!: "es" | "en"
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService) {}
+
+  ngOnChanges() {
     this.translate.use(this.language).subscribe()
-  }
-
-  toggleLanguage() {
-    this.language = this.language === "es" ? "en" : "es"
-    this.translate.use(this.language)
   }
 
   skills = [

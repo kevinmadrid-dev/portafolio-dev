@@ -1,22 +1,36 @@
-import { Component, Input } from "@angular/core"
+import { Component, Input, SimpleChanges } from "@angular/core"
+import { CommonModule } from "@angular/common"
+
 import { TranslateModule, TranslateService } from "@ngx-translate/core"
+import { trigger, transition, style, animate } from "@angular/animations"
 
 @Component({
   selector: "project-card",
-  imports: [TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: "./project-card.component.html",
-  styleUrl: "./project-card.component.css"
+  styleUrl: "./project-card.component.css",
+  animations: [
+    trigger("fadeLangChange", [
+      transition("es => en", [
+        style({ opacity: 0 }),
+        animate("300ms ease-in", style({ opacity: 1 }))
+      ]),
+      transition("en => es", [
+        style({ opacity: 0 }),
+        animate("300ms ease-in", style({ opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class ProjectCardComponent {
-  language: "es" | "en" = "es"
+  @Input() language!: "es" | "en"
 
-  constructor(private translate: TranslateService) {
-    this.translate.use(this.language).subscribe()
-  }
+  constructor(private translate: TranslateService) {}
 
-  toggleLanguage() {
-    this.language = this.language === "es" ? "en" : "es"
-    this.translate.use(this.language)
+  ngOnChanges() {
+    if (this.language) {
+      this.translate.use(this.language).subscribe()
+    }
   }
 
   @Input() title!: string

@@ -1,26 +1,36 @@
 import { CommonModule } from "@angular/common"
-import { Component } from "@angular/core"
+import { Component, Input } from "@angular/core"
 import { FormsModule, NgForm } from "@angular/forms"
-import { TranslateModule, TranslateService } from "@ngx-translate/core"
 
+import { TranslateModule, TranslateService } from "@ngx-translate/core"
+import { trigger, transition, style, animate } from "@angular/animations"
 import emailjs from "@emailjs/browser"
 
 @Component({
   selector: "app-contact",
   imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: "./contact.component.html",
-  styleUrl: "./contact.component.css"
+  styleUrl: "./contact.component.css",
+  animations: [
+    trigger("fadeLangChange", [
+      transition("es => en", [
+        style({ opacity: 0 }),
+        animate("300ms ease-in", style({ opacity: 1 }))
+      ]),
+      transition("en => es", [
+        style({ opacity: 0 }),
+        animate("300ms ease-in", style({ opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class ContactComponent {
-  language: "es" | "en" = "es"
+  @Input() language!: "es" | "en"
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService) {}
+
+  ngOnChanges() {
     this.translate.use(this.language).subscribe()
-  }
-
-  toggleLanguage() {
-    this.language = this.language === "es" ? "en" : "es"
-    this.translate.use(this.language)
   }
 
   currentYear = new Date().getFullYear()

@@ -1,6 +1,8 @@
-import { Component } from "@angular/core"
+import { Component, Input } from "@angular/core"
 import { CommonModule } from "@angular/common"
+
 import { TranslateModule, TranslateService } from "@ngx-translate/core"
+import { trigger, transition, style, animate } from "@angular/animations"
 
 import { ProjectCardComponent } from "../project-card/project-card.component"
 
@@ -8,18 +10,27 @@ import { ProjectCardComponent } from "../project-card/project-card.component"
   selector: "app-project",
   imports: [CommonModule, ProjectCardComponent, TranslateModule],
   templateUrl: "./project.component.html",
-  styleUrl: "./project.component.css"
+  styleUrl: "./project.component.css",
+  animations: [
+    trigger("fadeLangChange", [
+      transition("es => en", [
+        style({ opacity: 0 }),
+        animate("300ms ease-in", style({ opacity: 1 }))
+      ]),
+      transition("en => es", [
+        style({ opacity: 0 }),
+        animate("300ms ease-in", style({ opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class ProjectComponent {
-  language: "es" | "en" = "es"
+  @Input() language!: "es" | "en"
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService) {}
+
+  ngOnChanges() {
     this.translate.use(this.language).subscribe()
-  }
-
-  toggleLanguage() {
-    this.language = this.language === "es" ? "en" : "es"
-    this.translate.use(this.language)
   }
 
   projects = [

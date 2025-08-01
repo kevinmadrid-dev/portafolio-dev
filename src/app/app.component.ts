@@ -13,4 +13,10 @@ import { ContactComponent } from "./components/contact/contact.component"
 })
 export class AppComponent {
   title = "portafolio-dev"
+
+  language: "es" | "en" = "es"
+
+  toggleLanguage() {
+    this.language = this.language === "es" ? "en" : "es"
+  }
 }

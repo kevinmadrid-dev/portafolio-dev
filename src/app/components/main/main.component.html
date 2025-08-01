@@ -1,12 +1,16 @@
-<div id="home" class="main bg-[#1e1e1e] w-full h-full scroll-mt-10">
+<div
+  [@fadeLangChange]="language"
+  id="main"
+  class="main bg-[#1e1e1e] w-full h-full scroll-mt-10"
+>
   <nav
     class="fixed top-0 left-0 w-full z-50 backdrop-blur-md flex justify-between items-center px-8 py-6"
   >
     <ul class="w-full flex justify-center gap-6 text-white text-base font-semibold">
       <li class="m-1">
         <a
-          href="#home"
-          class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
+          href="#main"
+          class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105 fade-in"
         >
           {{ "navbar.inicio" | translate }}
         </a>

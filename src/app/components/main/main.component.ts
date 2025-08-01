@@ -1,26 +1,43 @@
 import { CommonModule } from "@angular/common"
-import { Component } from "@angular/core"
+import { Component, EventEmitter, Input, Output } from "@angular/core"
+
 import { TranslateModule, TranslateService } from "@ngx-translate/core"
+import { trigger, transition, style, animate } from "@angular/animations"
 
 @Component({
   selector: "app-main",
   imports: [CommonModule, TranslateModule],
   templateUrl: "./main.component.html",
-  styleUrl: "./main.component.css"
+  styleUrl: "./main.component.css",
+  animations: [
+    trigger("fadeLangChange", [
+      transition("es => en", [
+        style({ opacity: 0 }),
+        animate("300ms ease-in", style({ opacity: 1 }))
+      ]),
+      transition("en => es", [
+        style({ opacity: 0 }),
+        animate("300ms ease-in", style({ opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class MainComponent {
-  language: "es" | "en" = "es"
+  @Input() language!: "es" | "en"
+  @Output() languageToggle = new EventEmitter<void>()
   theme: "dark" | "light" = "dark"
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService) {}
+
+  ngOnChanges() {
     this.translate.use(this.language).subscribe()
   }
 
   toggleLanguage() {
-    this.language = this.language === "es" ? "en" : "es"
-    this.translate.use(this.language)
+    this.languageToggle.emit()
   }
 
+  // Cambio de tema con animación
   toggleTheme() {
     this.theme = this.theme === "dark" ? "light" : "dark"
     document.documentElement.classList.toggle("dark")
