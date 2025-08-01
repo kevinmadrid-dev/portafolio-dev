@@ -1,5 +1,7 @@
 import { Component } from "@angular/core"
 
+import { LanguageService } from "./services/language.service"
+
 import { MainComponent } from "./components/main/main.component"
 import { AboutComponent } from "./components/about/about.component"
 import { ProjectComponent } from "./components/project/project.component"
@@ -16,7 +18,13 @@ export class AppComponent {
 
   language: "es" | "en" = "es"
 
-  toggleLanguage() {
+  constructor(private languageService: LanguageService) {
+    this.language = this.languageService.getLanguage()
+    this.languageService.setLanguage(this.language) // Idioma al iniciar
+  }
+
+  toggleLanguage(): void {
     this.language = this.language === "es" ? "en" : "es"
+    this.languageService.setLanguage(this.language) // Actualiza TranslateService y guarda
   }
 }
