@@ -1,5 +1,5 @@
 <div [@fadeLangChange]="language" id="about" class="about bg-[#1e1e1e] scroll-mt-12">
-  <section class="p-10 text-white">
+  <section class="p-10">
     <h2 class="text-3xl font-semibold text-[#f97316] mb-4">
       {{ "about.sobre_mi" | translate }}
     </h2>
@@ -26,7 +26,7 @@
       <!-- Fila 1 (4 íconos) -->
       <div class="flex flex-wrap justify-center gap-4">
         <ng-container *ngFor="let tech of skills.slice(0, 4)">
-          <skill-card [icon]="tech.icon" [label]="tech.name" />
+          <skill-card [svgContent]="tech.svgContent" [label]="tech.name" />
         </ng-container>
       </div>
 

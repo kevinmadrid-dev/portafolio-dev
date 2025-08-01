@@ -1,0 +1,12 @@
+#skillCard {
+  background-color: var(--card-color);
+  color: var(--text-color);
+}
+
+#skillCard:hover {
+  background-color: var(--accent-color);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--accent-color);
+}

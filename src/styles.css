@@ -25,3 +25,17 @@ textarea:-webkit-autofill:focus {
   font-family: "Poppins", sans-serif !important;
   transition: background-color 9999s ease-in-out 0s;
 }
+
+:root {
+  --background-color: #d4d4d8;
+  --text-color: #1e1e1e;
+  --accent-color: #f97316;
+  --card-color: #411b02/20;
+}
+
+.dark-theme {
+  --background-color: #1e1e1e;
+  --text-color: white;
+  --accent-color: #f97316;
+  --card-color: #411b02/20;
+}

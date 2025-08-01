@@ -1,5 +1,11 @@
 <div class="main w-full h-full">
-  <app-main [language]="language" (languageToggle)="toggleLanguage()"></app-main>
+  <app-main
+    [language]="language"
+    [theme]="theme"
+    (languageToggle)="toggleLanguage()"
+    (themeToggle)="toggleTheme()"
+  ></app-main>
+
   <app-about [language]="language"></app-about>
   <app-project [language]="language"></app-project>
   <app-contact [language]="language"></app-contact>

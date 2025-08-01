@@ -24,8 +24,10 @@ import { trigger, transition, style, animate } from "@angular/animations"
 })
 export class MainComponent {
   @Input() language!: "es" | "en"
+  @Input() theme!: "dark" | "light"
+
   @Output() languageToggle = new EventEmitter<void>()
-  theme: "dark" | "light" = "dark"
+  @Output() themeToggle = new EventEmitter<void>()
 
   constructor(private translate: TranslateService) {}
 
@@ -33,13 +35,13 @@ export class MainComponent {
     this.translate.use(this.language).subscribe()
   }
 
+  // Cambio de idioma con animación
   toggleLanguage() {
     this.languageToggle.emit()
   }
 
   // Cambio de tema con animación
-  toggleTheme() {
-    this.theme = this.theme === "dark" ? "light" : "dark"
-    document.documentElement.classList.toggle("dark")
+  toggleTheme(): void {
+    this.themeToggle.emit()
   }
 }

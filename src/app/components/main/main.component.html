@@ -1,14 +1,12 @@
-<div
-  [@fadeLangChange]="language"
-  id="main"
-  class="main bg-[#1e1e1e] w-full h-full scroll-mt-10"
->
+<div [@fadeLangChange]="language" id="main" class="main w-full h-full scroll-mt-10">
   <nav
     class="fixed top-0 left-0 w-full z-50 backdrop-blur-md flex justify-between items-center px-8 py-6"
   >
     <div class="w-[10%]"></div>
 
-    <ul class="w-[80%] flex justify-center gap-6 text-white text-base font-semibold">
+    <ul
+      class="navbar-title w-[80%] text-base font-semibold flex justify-center gap-6"
+    >
       <li class="m-1">
         <a
           href="#main"
@@ -46,7 +44,7 @@
       </li>
     </ul>
 
-    <div class="w-[10%] flex items-center justify-end gap-4 text-sm text-white">
+    <div class="navbar-toggle w-[10%] flex items-center justify-end gap-4 text-sm">
       <button
         (click)="toggleLanguage()"
         class="flex flex-row justify-center items-center transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:cursor-pointer hover:scale-105"
@@ -86,7 +84,8 @@
             width="24"
             height="24"
             viewBox="0 0 24 24"
-            fill="currentColor"
+            fill="none"
+            stroke="currentColor"
             class="icon icon-tabler icons-tabler-filled icon-tabler-moon"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -102,7 +101,8 @@
             width="24"
             height="24"
             viewBox="0 0 24 24"
-            fill="currentColor"
+            fill="none"
+            stroke="currentColor"
             class="icon icon-tabler icons-tabler-filled icon-tabler-sun"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -142,7 +142,7 @@
   <section
     class="body h-full flex flex-col md:flex-row items-center justify-between px-20"
   >
-    <div class="w-full h-full text-white flex flex-col justify-center">
+    <div class="w-full h-full flex flex-col justify-center">
       <p class="text-3xl font-medium">{{ "navbar.saludo" | translate }}</p>
 
       <h1 class="text-2xl sm:text-3xl font-medium mt-2">
@@ -188,7 +188,9 @@
       </div>
     </div>
 
-    <div class="relative w-full h-full flex flex-row items-center justify-end">
+    <div
+      class="contact-icon relative w-full h-full flex flex-row items-center justify-end"
+    >
       <div class="w-48 h-48 md:w-72 md:h-72 rounded-full bg-neutral-800"></div>
 
       <div
@@ -208,7 +210,7 @@
             viewBox="0 0 16 16"
           >
             <path
-              fill="#ffffff"
+              fill="currentColor"
               d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248c-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586c.173-.431.568-.878 1.232-.878c.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252c-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
             />
           </svg>
@@ -226,7 +228,7 @@
             viewBox="0 0 20 20"
           >
             <path
-              fill="#ffffff"
+              fill="currentColor"
               d="M20 10.25q0 3.351-1.908 6.027t-4.928 3.703q-.352.068-.514-.093a.54.54 0 0 1-.163-.4V16.67q0-1.295-.677-1.895a9 9 0 0 0 1.335-.24q.591-.16 1.223-.52a3.7 3.7 0 0 0 1.055-.888q.423-.528.69-1.402t.267-2.008q0-1.616-1.028-2.75q.48-1.214-.105-2.723q-.364-.12-1.054.147a7 7 0 0 0-1.198.587l-.495.32a9 9 0 0 0-2.5-.346a9 9 0 0 0-2.5.347a12 12 0 0 0-.553-.36q-.345-.214-1.088-.514q-.741-.3-1.12-.18q-.572 1.507-.09 2.722q-1.03 1.134-1.03 2.75q0 1.134.268 2.002q.267.867.683 1.401a3.5 3.5 0 0 0 1.048.894q.632.36 1.224.52q.593.162 1.335.241q-.52.48-.638 1.375a2.5 2.5 0 0 1-.586.2a3.6 3.6 0 0 1-.742.067q-.43 0-.853-.287q-.423-.288-.723-.834a2.1 2.1 0 0 0-.631-.694q-.384-.267-.645-.32l-.26-.04q-.273 0-.378.06t-.065.153a.7.7 0 0 0 .117.187a1 1 0 0 0 .17.16l.09.066q.287.135.567.508q.28.374.41.68l.13.307q.17.507.574.821q.404.315.872.4q.468.087.905.094q.436.006.723-.047l.299-.053q0 .507.007 1.188l.006.72q0 .24-.17.4q-.168.162-.52.094q-3.021-1.028-4.928-3.703Q0 13.6 0 10.25q0-2.79 1.341-5.145a10.1 10.1 0 0 1 3.64-3.73A9.6 9.6 0 0 1 10 0a9.6 9.6 0 0 1 5.02 1.375a10.1 10.1 0 0 1 3.639 3.73Q20 7.461 20 10.25"
             />
           </svg>
@@ -245,7 +247,7 @@
             viewBox="0 0 24 24"
           >
             <path
-              fill="#ffffff"
+              fill="currentColor"
               d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64L12 9.548l6.545-4.91l1.528-1.145C21.69 2.28 24 3.434 24 5.457"
             />
           </svg>
@@ -264,7 +266,7 @@
             viewBox="0 0 32 32"
           >
             <path
-              fill="#ffffff"
+              fill="currentColor"
               d="M23.328 19.177c-.401-.203-2.354-1.156-2.719-1.292c-.365-.13-.63-.198-.896.203c-.26.391-1.026 1.286-1.26 1.547s-.464.281-.859.104c-.401-.203-1.682-.62-3.203-1.984c-1.188-1.057-1.979-2.359-2.214-2.76c-.234-.396-.026-.62.172-.818c.182-.182.401-.458.604-.698c.193-.24.255-.401.396-.661c.13-.281.063-.5-.036-.698s-.896-2.161-1.229-2.943c-.318-.776-.651-.677-.896-.677c-.229-.021-.495-.021-.76-.021s-.698.099-1.063.479c-.365.401-1.396 1.359-1.396 3.297c0 1.943 1.427 3.823 1.625 4.104c.203.26 2.807 4.26 6.802 5.979c.953.401 1.693.641 2.271.839c.953.302 1.823.26 2.51.161c.76-.125 2.354-.964 2.688-1.901c.339-.943.339-1.724.24-1.901c-.099-.182-.359-.281-.76-.458zM16.083 29h-.021c-2.365 0-4.703-.641-6.745-1.839l-.479-.286l-5 1.302l1.344-4.865l-.323-.5a13.17 13.17 0 0 1-2.021-7.01c0-7.26 5.943-13.182 13.255-13.182c3.542 0 6.865 1.38 9.365 3.88a13.06 13.06 0 0 1 3.88 9.323C29.328 23.078 23.39 29 16.088 29zM27.359 4.599C24.317 1.661 20.317 0 16.062 0C7.286 0 .14 7.115.135 15.859c0 2.792.729 5.516 2.125 7.927L0 32l8.448-2.203a16.1 16.1 0 0 0 7.615 1.932h.005c8.781 0 15.927-7.115 15.932-15.865c0-4.234-1.651-8.219-4.661-11.214z"
             />
           </svg>
