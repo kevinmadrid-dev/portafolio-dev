@@ -9,7 +9,7 @@ La idea fue construir una plataforma profesional, moderna, accesible y responsiv
 ## ✨ Características
 
 - 🎨 Diseño minimalista y responsivo.
-- 🌗 Soporte para modo claro y oscuro **(Aún en desarrollo)**.
+- 🌗 Soporte para modo claro y oscuro.
 - 🌍 Multilenguaje dinámico, Español e Inglés.
 - 📬 Formulario de contacto funcional con EmailJS.
 - ⚡ Animaciones suaves y navegación fluida.
