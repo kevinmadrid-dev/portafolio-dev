@@ -35,11 +35,12 @@ export class ProjectComponent {
 
   projects = [
     {
-      title: "project.title1",
-      description: "project.description1",
-      github: "",
-      demo: "",
-      image: "assets/project.webp"
+      title: "Encriptador de Texto",
+      description:
+        "Aplicación web para encriptar y desencriptar texto. Desarrollada como parte del Challenge de ONE + Alura.",
+      github: "https://github.com/kevinmadrid-dev/decrypter-encryptor-text",
+      demo: "https://decrypter-encryptor-text.vercel.app/",
+      image: "../../../assets/proyectos/decrypter-encryptor-text.png"
     },
     {
       title: "project.title2",
