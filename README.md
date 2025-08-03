@@ -30,7 +30,7 @@ La idea fue construir una plataforma profesional, moderna, accesible y responsiv
 
 ## 📸 Preview del proyecto
 
-![Preview del Portafolio](./src/assets/preview.png)
+![Preview del Portafolio](./src/assets/body.png)
 
 ---
 
