@@ -43,11 +43,12 @@ export class ProjectComponent {
       image: "../../../assets/proyectos/decrypter-encryptor-text.png"
     },
     {
-      title: "project.title2",
-      description: "project.description2",
-      github: "",
-      demo: "",
-      image: "assets/project.webp"
+      title: "GeoExplorer",
+      description:
+        "Reto técnico, permite explorar información sobre continentes y países del mundo mediante el uso de APIs.",
+      github: "https://github.com/kevinmadrid-dev/frontend-tech-test",
+      demo: "https://frontend-tech-test-theta.vercel.app/home",
+      image: "../../../assets/proyectos/geo-explorer.png"
     },
     {
       title: "project.title3",
