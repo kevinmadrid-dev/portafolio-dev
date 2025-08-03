@@ -14,36 +14,73 @@
       class="max-w-3xl mx-auto grid gap-6"
     >
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 my-8">
-        <input
-          type="text"
-          name="name"
-          [(ngModel)]="form.name"
-          [placeholder]="'contact.nombre' | translate"
-          maxlength="25"
-          required
-          class="bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition"
-        />
+        <div>
+          <input
+            type="text"
+            name="name"
+            #nameField="ngModel"
+            [(ngModel)]="contactForm.name"
+            [placeholder]="'contact.nombre' | translate"
+            maxlength="25"
+            required
+            class="bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition w-full"
+          />
+          <div
+            *ngIf="nameField.invalid && nameField.touched"
+            class="text-red-500 text-sm mt-1"
+          >
+            <span *ngIf="nameField.errors?.['required']">
+              {{ "contact.errorNombre" | translate }}
+            </span>
+          </div>
+        </div>
 
-        <input
-          type="email"
-          name="email"
-          ngModel
-          [placeholder]="'contact.email' | translate"
-          maxlength="25"
-          required
-          class="bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition"
-        />
+        <div>
+          <input
+            type="email"
+            name="email"
+            #emailField="ngModel"
+            [(ngModel)]="contactForm.email"
+            [placeholder]="'contact.email' | translate"
+            maxlength="50"
+            required
+            email
+            class="bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition w-full"
+          />
+          <div
+            *ngIf="emailField.invalid && emailField.touched"
+            class="text-red-500 text-sm mt-1"
+          >
+            <span *ngIf="emailField.errors?.['required']">
+              {{ "contact.errorEmailRequerido" | translate }}
+            </span>
+            <span *ngIf="emailField.errors?.['email']">
+              {{ "contact.errorEmailFormato" | translate }}
+            </span>
+          </div>
+        </div>
       </div>
 
-      <textarea
-        name="message"
-        ngModel
-        [placeholder]="'contact.mensaje' | translate"
-        rows="1"
-        maxlength="200"
-        required
-        class="bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition resize-none my-8"
-      ></textarea>
+      <div>
+        <textarea
+          name="message"
+          #messageField="ngModel"
+          [(ngModel)]="contactForm.message"
+          [placeholder]="'contact.mensaje' | translate"
+          rows="1"
+          maxlength="200"
+          required
+          class="bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition resize-none my-8 w-full"
+        ></textarea>
+        <div
+          *ngIf="messageField.invalid && messageField.touched"
+          class="text-red-500 text-sm mt-1 mb-4"
+        >
+          <span *ngIf="messageField.errors?.['required']">
+            {{ "contact.errorMensaje" | translate }}
+          </span>
+        </div>
+      </div>
 
       <div class="text-center">
         <button

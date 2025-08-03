@@ -48,6 +48,10 @@
     "btnEnviar": "Enviar",
     "textoConfirmacion": "Mensaje enviado con éxito 🎉",
     "textoError": "Hubo un error al enviar el mensaje 😢",
+    "errorNombre": "El nombre es requerido",
+    "errorEmailRequerido": "El correo electrónico es requerido",
+    "errorEmailFormato": "Por favor, ingresa un correo válido (ej: usuario@dominio.com)",
+    "errorMensaje": "El mensaje es requerido",
     "redesSociales": "Mis redes sociales",
     "mensajeFooter": "¡Gracias por visitar mi portafolio!"
   }

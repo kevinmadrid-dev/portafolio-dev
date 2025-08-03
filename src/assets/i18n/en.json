@@ -48,6 +48,10 @@
     "btnEnviar": "Send Message",
     "textoConfirmacion": "Message sent successfully 🎉",
     "textoError": "There was an error sending the message 😢",
+    "errorNombre": "Name is required",
+    "errorEmailRequerido": "Email is required",
+    "errorEmailFormato": "Please enter a valid email (e.g: user@domain.com)",
+    "errorMensaje": "Message is required",
     "redesSociales": "My social networks",
     "mensajeFooter": "Thank you for visiting my portfolio!"
   }

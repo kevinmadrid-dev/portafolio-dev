@@ -27,6 +27,12 @@ import emailjs from "@emailjs/browser"
 export class ContactComponent {
   @Input() language!: "es" | "en"
 
+  contactForm = {
+    name: "",
+    email: "",
+    message: ""
+  }
+
   constructor(private translate: TranslateService) {}
 
   ngOnChanges() {
@@ -43,7 +49,7 @@ export class ContactComponent {
       return
     }
 
-    const { name, email, message } = form.value
+    const { name, email, message } = this.contactForm
 
     const ahora = new Date()
     const templateParams = {
@@ -64,6 +70,7 @@ export class ContactComponent {
       .then(() => {
         this.isSent = true
         this.isError = false
+        this.contactForm = { name: "", email: "", message: "" }
         form.reset()
 
         // Ocultar mensaje de éxito después de 5 segundos
