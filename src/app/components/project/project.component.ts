@@ -35,17 +35,15 @@ export class ProjectComponent {
 
   projects = [
     {
-      title: "Encriptador de Texto",
-      description:
-        "Aplicación web para encriptar y desencriptar texto. Desarrollada como parte del Challenge de ONE + Alura.",
+      title: "project.title1",
+      description: "project.description1",
       github: "https://github.com/kevinmadrid-dev/decrypter-encryptor-text",
       demo: "https://decrypter-encryptor-text.vercel.app/",
       image: "../../../assets/proyectos/decrypter-encryptor-text.png"
     },
     {
-      title: "GeoExplorer",
-      description:
-        "Reto técnico, permite explorar información sobre continentes y países del mundo mediante el uso de APIs.",
+      title: "project.title2",
+      description: "project.description2",
       github: "https://github.com/kevinmadrid-dev/frontend-tech-test",
       demo: "https://frontend-tech-test-theta.vercel.app",
       image: "../../../assets/proyectos/geo-explorer.png"

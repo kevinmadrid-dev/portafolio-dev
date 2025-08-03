@@ -25,10 +25,10 @@
 
   "project": {
     "proyectos": "Projects",
-    "title1": "Project 01",
-    "description1": "*Projects coming soon",
-    "title2": "Project 02",
-    "description2": "*Projects coming soon",
+    "title1": "Text Encryptor",
+    "description1": "Web application for encrypting and decrypting text. Developed as part of the ONE + Alura Challenge.",
+    "title2": "GeoExplorer",
+    "description2": "Technical challenge that allows exploration of information about continents and countries around the world using APIs.",
     "title3": "Project 03",
     "description3": "*Projects coming soon",
     "title4": "Project 04",

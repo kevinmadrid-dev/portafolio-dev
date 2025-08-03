@@ -25,10 +25,10 @@
 
   "project": {
     "proyectos": "Proyectos",
-    "title1": "Proyecto 01",
-    "description1": "*Proyectos agregados próximamente",
-    "title2": "Proyecto 02",
-    "description2": "*Proyectos agregados próximamente",
+    "title1": "Encriptador de Texto",
+    "description1": "Aplicación web para encriptar y desencriptar texto. Desarrollada como parte del Challenge de ONE + Alura.",
+    "title2": "GeoExplorer",
+    "description2": "Reto técnico, permite explorar información sobre continentes y países del mundo mediante el uso de APIs.",
     "title3": "Proyecto 03",
     "description3": "*Proyectos agregados próximamente",
     "title4": "Proyecto 04",
