@@ -47,7 +47,7 @@ export class ProjectComponent {
       description:
         "Reto técnico, permite explorar información sobre continentes y países del mundo mediante el uso de APIs.",
       github: "https://github.com/kevinmadrid-dev/frontend-tech-test",
-      demo: "https://frontend-tech-test-theta.vercel.app/home",
+      demo: "https://frontend-tech-test-theta.vercel.app",
       image: "../../../assets/proyectos/geo-explorer.png"
     },
     {
