@@ -46,6 +46,7 @@
     "mensaje": "Message",
     "mensajeAlerta": "Don't worry, I will contact you as soon as possible.",
     "btnEnviar": "Send Message",
+    "btnEnviando": "Sending...",
     "textoConfirmacion": "Message sent successfully 🎉",
     "textoError": "There was an error sending the message 😢",
     "errorNombre": "Name is required",

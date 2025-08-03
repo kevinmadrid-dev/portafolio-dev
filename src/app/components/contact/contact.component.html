@@ -11,9 +11,9 @@
     <form
       #form="ngForm"
       (ngSubmit)="onSubmit(form)"
-      class="max-w-3xl mx-auto grid gap-6"
+      class="max-w-3xl mx-auto grid gap-x-6 gap-y-12"
     >
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 my-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <input
             type="text"
@@ -70,8 +70,9 @@
           rows="1"
           maxlength="200"
           required
-          class="bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition resize-none my-8 w-full"
+          class="bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition resize-none w-full"
         ></textarea>
+
         <div
           *ngIf="messageField.invalid && messageField.touched"
           class="text-red-500 text-sm mt-1 mb-4"
@@ -85,9 +86,15 @@
       <div class="text-center">
         <button
           type="submit"
-          class="bg-[#f97316] text-white px-6 py-2 border border-[#f97316] rounded-md mb-8 transition-transform duration-200 ease-in-out hover:bg-transparent hover:text-[#f97316] hover:border-[#f97316] hover:scale-105 hover:cursor-pointer"
+          [disabled]="isSubmitting"
+          [class]="
+            isSubmitting
+              ? 'bg-gray-500 text-white px-6 py-2 border border-gray-500 rounded-md mb-8 cursor-not-allowed opacity-70'
+              : 'bg-[#f97316] text-white px-6 py-2 border border-[#f97316] rounded-md mb-8 transition-transform duration-200 ease-in-out hover:bg-transparent hover:text-[#f97316] hover:border-[#f97316] hover:scale-105 hover:cursor-pointer'
+          "
         >
-          {{ "contact.btnEnviar" | translate }}
+          <span *ngIf="!isSubmitting">{{ "contact.btnEnviar" | translate }}</span>
+          <span *ngIf="isSubmitting">{{ "contact.btnEnviando" | translate }}</span>
         </button>
       </div>
 

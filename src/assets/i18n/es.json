@@ -46,6 +46,7 @@
     "mensaje": "Mensaje",
     "mensajeAlerta": "No te preocupes, me pondré en contacto contigo lo más pronto posible.",
     "btnEnviar": "Enviar",
+    "btnEnviando": "Enviando...",
     "textoConfirmacion": "Mensaje enviado con éxito 🎉",
     "textoError": "Hubo un error al enviar el mensaje 😢",
     "errorNombre": "El nombre es requerido",

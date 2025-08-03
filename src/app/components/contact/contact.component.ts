@@ -42,12 +42,21 @@ export class ContactComponent {
   currentYear = new Date().getFullYear()
   isSent = false
   isError = false
+  isSubmitting = false
 
   onSubmit(form: NgForm): void {
-    if (form.invalid) {
+    if (form.invalid || this.isSubmitting) {
       this.isError = true
+      setTimeout(() => {
+        this.isError = false
+      }, 3000)
       return
     }
+
+    // Activar estado de envío
+    this.isSubmitting = true
+    this.isError = false
+    this.isSent = false
 
     const { name, email, message } = this.contactForm
 
@@ -70,17 +79,26 @@ export class ContactComponent {
       .then(() => {
         this.isSent = true
         this.isError = false
+        this.isSubmitting = false
+
+        // Limpiar formulario inmediatamente
         this.contactForm = { name: "", email: "", message: "" }
         form.reset()
 
-        // Ocultar mensaje de éxito después de 5 segundos
+        // Ocultar mensaje de éxito después de 3 segundos
         setTimeout(() => {
           this.isSent = false
-        }, 5000)
+        }, 3000)
       })
       .catch((error) => {
         console.error("Error al enviar el correo:", error)
         this.isError = true
+        this.isSubmitting = false
+
+        // Ocultar mensaje de error después de 3 segundos
+        setTimeout(() => {
+          this.isError = false
+        }, 3000)
       })
   }
 }
