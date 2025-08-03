@@ -1,12 +1,14 @@
-<div class="main w-full h-full">
-  <app-main
-    [language]="language"
-    [theme]="theme"
-    (languageToggle)="toggleLanguage()"
-    (themeToggle)="toggleTheme()"
-  ></app-main>
+<body class="bg-white text-black dark:bg-[#1e1e1e] dark:text-white">
+  <div class="main w-full h-full">
+    <app-main
+      [language]="language"
+      [theme]="theme"
+      (languageToggle)="toggleLanguage()"
+      (themeToggle)="toggleTheme()"
+    ></app-main>
 
-  <app-about [language]="language"></app-about>
-  <app-project [language]="language"></app-project>
-  <app-contact [language]="language"></app-contact>
-</div>
+    <app-about [language]="language"></app-about>
+    <app-project [language]="language"></app-project>
+    <app-contact [language]="language"></app-contact>
+  </div>
+</body>

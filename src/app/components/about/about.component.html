@@ -26,7 +26,7 @@
       <!-- Fila 1 (4 íconos) -->
       <div class="flex flex-wrap justify-center gap-4">
         <ng-container *ngFor="let tech of skills.slice(0, 4)">
-          <skill-card [svgContent]="tech.svgContent" [label]="tech.name" />
+          <skill-card [icon]="tech.icon" [label]="tech.name" />
         </ng-container>
       </div>
 

@@ -10,5 +10,4 @@ import { Component, Input } from "@angular/core"
 export class SkillCardComponent {
   @Input() icon!: string
   @Input() label!: string
-  @Input() svgContent!: string
 }

@@ -1,3 +1,23 @@
+#contact {
+  background-color: var(--background-color);
+  color: var(--form-color);
+}
+
+.footer,
+.social-icons {
+  color: var(--text-color);
+}
+
+.theme-separator {
+  background: repeating-linear-gradient(
+    to right,
+    var(--text-color),
+    var(--text-color) 6px,
+    transparent 6px,
+    transparent 16px
+  );
+}
+
 .fade-out {
   opacity: 0;
   transition: opacity 300ms ease-in-out;

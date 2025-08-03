@@ -1,8 +1,8 @@
 <div
   id="skillCard"
-  class="border border-[#f97316] rounded-lg p-3 w-28 h-28 flex flex-col items-center justify-center transition-all duration-300"
+  class="bg-[#411B02]/20 border border-[#f97316] rounded-lg p-3 w-28 h-28 flex flex-col items-center justify-center transition-all duration-300"
 >
-  <div class="w-8 h-8 mb-2 text-white" [innerHTML]="svgContent"></div>
+  <img [src]="icon" alt="{{ label }}" class="w-8 h-8 mb-2" />
 
-  <span class="text-xs font-medium text-center">{{ label }}</span>
+  <span class="text-xs font-medium text-center text-white">{{ label }}</span>
 </div>
