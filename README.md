@@ -6,6 +6,12 @@ La idea fue construir una plataforma profesional, moderna, accesible y responsiv
 
 ---
 
+## 📸 Preview del proyecto
+
+![Preview del Portafolio](./src/assets/body.png)
+
+---
+
 ## ✨ Características
 
 - 🎨 Diseño minimalista y responsivo.
@@ -25,12 +31,6 @@ La idea fue construir una plataforma profesional, moderna, accesible y responsiv
 - [@ngx-translate/core](https://github.com/ngx-translate/core) ⭢ para la traducción de textos
 - [Figma](https://figma.com/) ⭢ diseño de interfaz
 - [Vercel](https://vercel.com/) ⭢ despliegue del proyecto
-
----
-
-## 📸 Preview del proyecto
-
-![Preview del Portafolio](./src/assets/body.png)
 
 ---
 
@@ -61,3 +61,12 @@ ng serve
 ```
 
 - NOTA: El proyecto se abrirá en http://localhost:4200
+
+---
+
+### Contacto
+
+- GitHub: [kevinmadrid-dev](https://github.com/kevinmadrid-dev)
+- LinkedIn: [kevinmadrid-dev](https://www.linkedin.com/in/kevinmadrid-dev/)
+
+⭐ Si te gusta este proyecto, ¡dale una estrella en GitHub!
