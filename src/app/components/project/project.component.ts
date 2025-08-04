@@ -51,9 +51,9 @@ export class ProjectComponent {
     {
       title: "project.title3",
       description: "project.description3",
-      github: "",
-      demo: "",
-      image: "assets/project.webp"
+      github: "https://github.com/kevinmadrid-dev/spa-petclinic",
+      demo: "https://react-spa-petclinic.vercel.app/",
+      image: "../../../assets/proyectos/doguito-petshop.png"
     },
     {
       title: "project.title4",
