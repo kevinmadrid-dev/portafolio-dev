@@ -58,9 +58,9 @@ export class ProjectComponent {
     {
       title: "project.title4",
       description: "project.description4",
-      github: "",
-      demo: "",
-      image: "assets/project.webp"
+      github: "https://github.com/kevinmadrid-dev/cash-flow.git",
+      demo: "https://cash-flow-puce.vercel.app/",
+      image: "../../../assets/proyectos/cash-flow.png"
     },
     {
       title: "project.title5",
