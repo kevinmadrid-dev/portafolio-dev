@@ -65,9 +65,9 @@ export class ProjectComponent {
     {
       title: "project.title5",
       description: "project.description5",
-      github: "",
-      demo: "",
-      image: "assets/project.webp"
+      github: "https://github.com/kevinmadrid-dev/gifs-app.git",
+      demo: "https://gifs-app-two-delta.vercel.app/",
+      image: "../../../assets/proyectos/gif-app.png"
     },
     {
       title: "project.title6",
