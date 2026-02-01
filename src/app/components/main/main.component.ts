@@ -11,11 +11,7 @@ import { trigger, transition, style, animate } from "@angular/animations"
   styleUrl: "./main.component.css",
   animations: [
     trigger("fadeLangChange", [
-      transition("es => en", [
-        style({ opacity: 0 }),
-        animate("300ms ease-in", style({ opacity: 1 }))
-      ]),
-      transition("en => es", [
+      transition("es <=> en", [
         style({ opacity: 0 }),
         animate("300ms ease-in", style({ opacity: 1 }))
       ])
