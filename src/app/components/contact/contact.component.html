@@ -25,14 +25,16 @@
             required
             class="bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition w-full"
           />
-          <div
-            *ngIf="nameField.invalid && nameField.touched"
-            class="text-red-500 text-sm mt-1"
-          >
-            <span *ngIf="nameField.errors?.['required']">
-              {{ "contact.errorNombre" | translate }}
-            </span>
-          </div>
+
+          @if (nameField.invalid && nameField.touched) {
+            <div class="text-red-500 text-sm mt-1">
+              @if (nameField.errors?.["required"]) {
+                <span>
+                  {{ "contact.errorNombre" | translate }}
+                </span>
+              }
+            </div>
+          }
         </div>
 
         <div>
@@ -47,17 +49,22 @@
             email
             class="bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition w-full"
           />
-          <div
-            *ngIf="emailField.invalid && emailField.touched"
-            class="text-red-500 text-sm mt-1"
-          >
-            <span *ngIf="emailField.errors?.['required']">
-              {{ "contact.errorEmailRequerido" | translate }}
-            </span>
-            <span *ngIf="emailField.errors?.['email']">
-              {{ "contact.errorEmailFormato" | translate }}
-            </span>
-          </div>
+
+          @if (emailField.invalid && emailField.touched) {
+            <div class="text-red-500 text-sm mt-1">
+              @if (emailField.errors?.["required"]) {
+                <span>
+                  {{ "contact.errorEmailRequerido" | translate }}
+                </span>
+              }
+
+              @if (emailField.errors?.["email"]) {
+                <span>
+                  {{ "contact.errorEmailFormato" | translate }}
+                </span>
+              }
+            </div>
+          }
         </div>
       </div>
 
@@ -73,14 +80,15 @@
           class="bg-transparent pl-2 border-b outline-none focus:border-[#f97316] transition resize-none w-full"
         ></textarea>
 
-        <div
-          *ngIf="messageField.invalid && messageField.touched"
-          class="text-red-500 text-sm mt-1 mb-4"
-        >
-          <span *ngIf="messageField.errors?.['required']">
-            {{ "contact.errorMensaje" | translate }}
-          </span>
-        </div>
+        @if (messageField.invalid && messageField.touched) {
+          <div class="text-red-500 text-sm mt-1 mb-4">
+            @if (messageField.errors?.["required"]) {
+              <span>
+                {{ "contact.errorMensaje" | translate }}
+              </span>
+            }
+          </div>
+        }
       </div>
 
       <div class="text-center">
@@ -93,19 +101,24 @@
               : 'bg-[#f97316] text-white px-6 py-2 border border-[#f97316] rounded-md mb-8 transition-transform duration-200 ease-in-out hover:bg-transparent hover:text-[#f97316] hover:border-[#f97316] hover:scale-105 hover:cursor-pointer'
           "
         >
-          <span *ngIf="!isSubmitting">{{ "contact.btnEnviar" | translate }}</span>
-          <span *ngIf="isSubmitting">{{ "contact.btnEnviando" | translate }}</span>
+          @if (isSubmitting) {
+            <span>{{ "contact.btnEnviando" | translate }}</span>
+          } @else {
+            <span>{{ "contact.btnEnviar" | translate }}</span>
+          }
         </button>
       </div>
 
       <!-- Mensajes de éxito/error -->
-      <div *ngIf="isSent" class="text-green-500 text-center">
-        {{ "contact.textoConfirmacion" | translate }}
-      </div>
-
-      <div *ngIf="isError" class="text-red-500 text-center">
-        {{ "contact.textoError" | translate }}
-      </div>
+      @if (isSent) {
+        <div class="text-green-500 text-center">
+          {{ "contact.textoConfirmacion" | translate }}
+        </div>
+      } @else if (isError) {
+        <div class="text-red-500 text-center">
+          {{ "contact.textoError" | translate }}
+        </div>
+      }
     </form>
 
     <!-- Texto de confirmación -->

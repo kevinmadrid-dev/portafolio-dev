@@ -13,11 +13,7 @@ import emailjs from "@emailjs/browser"
   styleUrl: "./contact.component.css",
   animations: [
     trigger("fadeLangChange", [
-      transition("es => en", [
-        style({ opacity: 0 }),
-        animate("300ms ease-in", style({ opacity: 1 }))
-      ]),
-      transition("en => es", [
+      transition("es <=> en", [
         style({ opacity: 0 }),
         animate("300ms ease-in", style({ opacity: 1 }))
       ])
@@ -71,7 +67,7 @@ export class ContactComponent {
 
     emailjs
       .send(
-        "service_8u5m8rq",
+        "service_pb5a34u",
         "template_znoiqdd",
         templateParams,
         "aT7zK2eK_LuJRCg5X"
