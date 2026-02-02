@@ -4,9 +4,9 @@
     "sobreMi": "About Me",
     "proyectos": "Projects",
     "contacto": "Contact",
-    "saludo": "Hi!",
-    "textBody1": "I'm",
-    "textBody2": "FullStack Developer",
+    "saludo": "Hi, my",
+    "textBody1": "name is",
+    "textBody2": "I'm a FullStack Developer.",
     "BtnContacto": "Contact",
     "BtnDescargarCV": "Download CV"
   },
