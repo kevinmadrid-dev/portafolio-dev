@@ -13,11 +13,7 @@ import { ProjectCardComponent } from "../project-card/project-card.component"
   styleUrl: "./project.component.css",
   animations: [
     trigger("fadeLangChange", [
-      transition("es => en", [
-        style({ opacity: 0 }),
-        animate("300ms ease-in", style({ opacity: 1 }))
-      ]),
-      transition("en => es", [
+      transition("es <=> en", [
         style({ opacity: 0 }),
         animate("300ms ease-in", style({ opacity: 1 }))
       ])
@@ -35,6 +31,7 @@ export class ProjectComponent {
 
   projects = [
     {
+      id: 1,
       title: "project.title1",
       description: "project.description1",
       github: "https://github.com/kevinmadrid-dev/decrypter-encryptor-text",
@@ -42,6 +39,7 @@ export class ProjectComponent {
       image: "../../../assets/proyectos/decrypter-encryptor-text.png"
     },
     {
+      id: 2,
       title: "project.title2",
       description: "project.description2",
       github: "https://github.com/kevinmadrid-dev/frontend-tech-test",
@@ -49,6 +47,7 @@ export class ProjectComponent {
       image: "../../../assets/proyectos/geo-explorer.png"
     },
     {
+      id: 3,
       title: "project.title3",
       description: "project.description3",
       github: "https://github.com/kevinmadrid-dev/spa-petclinic",
@@ -56,6 +55,7 @@ export class ProjectComponent {
       image: "../../../assets/proyectos/doguito-petshop.png"
     },
     {
+      id: 4,
       title: "project.title4",
       description: "project.description4",
       github: "https://github.com/kevinmadrid-dev/cash-flow.git",
@@ -63,6 +63,7 @@ export class ProjectComponent {
       image: "../../../assets/proyectos/cash-flow.png"
     },
     {
+      id: 5,
       title: "project.title5",
       description: "project.description5",
       github: "https://github.com/kevinmadrid-dev/gifs-app.git",
@@ -70,6 +71,7 @@ export class ProjectComponent {
       image: "../../../assets/proyectos/gif-app.png"
     },
     {
+      id: 6,
       title: "project.title6",
       description: "project.description6",
       github: "",

@@ -11,15 +11,16 @@
     <div
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
     >
-      <project-card
-        *ngFor="let p of projects"
-        [language]="language"
-        [title]="p.title"
-        [description]="p.description"
-        [github]="p.github"
-        [demo]="p.demo"
-        [image]="p.image"
-      />
+      @for (p of projects; track p.id) {
+        <project-card
+          [language]="language"
+          [title]="p.title"
+          [description]="p.description"
+          [github]="p.github"
+          [demo]="p.demo"
+          [image]="p.image"
+        />
+      }
     </div>
   </section>
 </div>
