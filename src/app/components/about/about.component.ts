@@ -1,8 +1,5 @@
 import { CommonModule } from "@angular/common"
 import { Component, Input } from "@angular/core"
-import { HttpClient } from "@angular/common/http"
-import { DomSanitizer, SafeHtml } from "@angular/platform-browser"
-
 import { TranslateModule, TranslateService } from "@ngx-translate/core"
 import { trigger, transition, style, animate } from "@angular/animations"
 
@@ -29,10 +26,7 @@ import { SkillCardComponent } from "../skill-card/skill-card.component"
 export class AboutComponent {
   @Input() language!: "es" | "en"
 
-  constructor(
-    private translate: TranslateService,
-    private sanitizer: DomSanitizer
-  ) {}
+  constructor(private translate: TranslateService) {}
 
   ngOnChanges() {
     this.translate.use(this.language).subscribe()

@@ -25,30 +25,38 @@
     <div class="flex flex-col gap-6 items-center">
       <!-- Fila 1 (4 íconos) -->
       <div class="flex flex-wrap justify-center gap-4">
-        <ng-container *ngFor="let tech of skills.slice(0, 4)">
-          <skill-card [icon]="tech.icon" [label]="tech.name" />
-        </ng-container>
+        @for (tech of skills.slice(0, 4); track tech.name) {
+          <ng-container>
+            <skill-card [icon]="tech.icon" [label]="tech.name" />
+          </ng-container>
+        }
       </div>
 
       <!-- Fila 2 (5 íconos) -->
       <div class="flex flex-wrap justify-center gap-4">
-        <ng-container *ngFor="let tech of skills.slice(4, 9)">
-          <skill-card [icon]="tech.icon" [label]="tech.name" />
-        </ng-container>
+        @for (tech of skills.slice(4, 9); track tech.name) {
+          <ng-container>
+            <skill-card [icon]="tech.icon" [label]="tech.name" />
+          </ng-container>
+        }
       </div>
 
       <!-- Fila 3 (4 íconos) -->
       <div class="flex flex-wrap justify-center gap-4">
-        <ng-container *ngFor="let tech of skills.slice(9, 13)">
-          <skill-card [icon]="tech.icon" [label]="tech.name" />
-        </ng-container>
+        @for (tech of skills.slice(9, 13); track tech.name) {
+          <ng-container>
+            <skill-card [icon]="tech.icon" [label]="tech.name" />
+          </ng-container>
+        }
       </div>
 
       <!-- Fila 4 (6 íconos) -->
       <div class="flex flex-wrap justify-center gap-4">
-        <ng-container *ngFor="let tech of skills.slice(13, 19)">
-          <skill-card [icon]="tech.icon" [label]="tech.name" />
-        </ng-container>
+        @for (tech of skills.slice(13, 19); track tech.name) {
+          <ng-container>
+            <skill-card [icon]="tech.icon" [label]="tech.name" />
+          </ng-container>
+        }
       </div>
     </div>
   </section>
