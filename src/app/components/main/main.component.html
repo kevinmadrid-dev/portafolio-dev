@@ -1,135 +1,206 @@
 <div [@fadeLangChange]="language" id="main" class="main w-full h-full scroll-mt-10">
-  <nav
-    class="fixed top-0 left-0 w-full z-50 backdrop-blur-md flex justify-between items-center px-8 py-6"
-  >
-    <div class="w-[10%]"></div>
+  <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md">
+    <div class="flex items-center justify-between p-4">
+      <div class="hidden md:flex flex-1"></div>
 
-    <ul
-      class="navbar-title w-[80%] text-base font-semibold flex justify-center gap-6"
-    >
-      <li class="m-1">
-        <a
-          href="#main"
-          class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105 fade-in"
-        >
-          {{ "navbar.inicio" | translate }}
-        </a>
-      </li>
-
-      <li class="m-1">
-        <a
-          href="#about"
-          class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
-        >
-          {{ "navbar.sobreMi" | translate }}
-        </a>
-      </li>
-
-      <li class="m-1">
-        <a
-          href="#projects"
-          class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
-        >
-          {{ "navbar.proyectos" | translate }}
-        </a>
-      </li>
-
-      <li class="m-1">
-        <a
-          href="#contact"
-          class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
-        >
-          {{ "navbar.contacto" | translate }}
-        </a>
-      </li>
-    </ul>
-
-    <div class="navbar-toggle w-[10%] flex items-center justify-end gap-4 text-sm">
-      <button
-        (click)="toggleLanguage()"
-        class="flex flex-row justify-center items-center transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:cursor-pointer hover:scale-105"
-      >
+      <button class="md:hidden p-2" (click)="toggleMenu()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="2em"
-          height="2em"
+          width="24"
+          height="24"
           viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
         >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          >
-            <path d="M21 12a9 9 0 1 0-8.979 9M3.6 9h16.8M3.6 15h8.9" />
-            <path
-              d="M11.5 3a17 17 0 0 0 0 18m1-18a17 17 0 0 1 2.522 10.376M17.001 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0m2-3.5V17m0 4v1.5m3.031-5.25l-1.299.75m-3.463 2l-1.3.75m0-3.5l1.3.75m3.463 2l1.3.75"
-            />
-          </g>
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 6l16 0" />
+          <path d="M4 12l16 0" />
+          <path d="M4 18l16 0" />
         </svg>
-
-        <span class="w-[0.8rem] m-1 font-medium">{{
-          language === "es" ? "EN" : "ES"
-        }}</span>
       </button>
 
-      <button
-        (click)="toggleTheme()"
-        class="flex flex-row justify-center items-center transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:cursor-pointer hover:scale-105"
+      <ul
+        class="navbar-title hidden md:flex flex-2 justify-center gap-6 text-base font-semibold"
       >
-        <span>
-          @if (theme === "dark") {
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="2em"
-              height="2em"
-              viewBox="0 0 24 24"
+        <li class="m-1">
+          <a
+            href="#main"
+            class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105 fade-in"
+          >
+            {{ "navbar.inicio" | translate }}
+          </a>
+        </li>
+
+        <li class="m-1">
+          <a
+            href="#about"
+            class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
+          >
+            {{ "navbar.sobreMi" | translate }}
+          </a>
+        </li>
+
+        <li class="m-1">
+          <a
+            href="#projects"
+            class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
+          >
+            {{ "navbar.proyectos" | translate }}
+          </a>
+        </li>
+
+        <li class="m-1">
+          <a
+            href="#contact"
+            class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
+          >
+            {{ "navbar.contacto" | translate }}
+          </a>
+        </li>
+      </ul>
+
+      <div class="navbar-toggle flex flex-1 justify-end items-center gap-4 text-sm">
+        <button
+          (click)="toggleLanguage()"
+          class="flex flex-row justify-center items-center transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:cursor-pointer hover:scale-105"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="2em"
+            height="2em"
+            viewBox="0 0 24 24"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
             >
-              <g fill="none">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M13 3a1 1 0 1 0-2 0v1a1 1 0 1 0 2 0V3zM5.707 4.293a1 1 0 0 0-1.414 1.414l1 1a1 1 0 0 0 1.414-1.414l-1-1zm14 0a1 1 0 0 0-1.414 0l-1 1a1 1 0 0 0 1.414 1.414l1-1a1 1 0 0 0 0-1.414zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm-9 4a1 1 0 1 0 0 2h1a1 1 0 1 0 0-2H3zm17 0a1 1 0 1 0 0 2h1a1 1 0 1 0 0-2h-1zM6.707 18.707a1 1 0 1 0-1.414-1.414l-1 1a1 1 0 1 0 1.414 1.414l1-1zm12-1.414a1 1 0 0 0-1.414 1.414l1 1a1 1 0 0 0 1.414-1.414l-1-1zM13 20a1 1 0 1 0-2 0v1a1 1 0 1 0 2 0v-1z"
-                  fill="currentColor"
-                />
-              </g>
-            </svg>
-          } @else {
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="2em"
-              height="2em"
-              viewBox="0 0 24 24"
-            >
+              <path d="M21 12a9 9 0 1 0-8.979 9M3.6 9h16.8M3.6 15h8.9" />
               <path
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9.353 3C5.849 4.408 3 7.463 3 11.47A9.53 9.53 0 0 0 12.53 21c4.007 0 7.062-2.849 8.47-6.353C8.17 17.065 8.14 8.14 9.353 3"
+                d="M11.5 3a17 17 0 0 0 0 18m1-18a17 17 0 0 1 2.522 10.376M17.001 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0m2-3.5V17m0 4v1.5m3.031-5.25l-1.299.75m-3.463 2l-1.3.75m0-3.5l1.3.75m3.463 2l1.3.75"
               />
-            </svg>
-          }
-        </span>
-      </button>
+            </g>
+          </svg>
+
+          <span class="w-[0.8rem] m-1 font-medium">{{
+            language === "es" ? "EN" : "ES"
+          }}</span>
+        </button>
+
+        <button
+          (click)="toggleTheme()"
+          class="flex flex-row justify-center items-center transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:cursor-pointer hover:scale-105"
+        >
+          <span>
+            @if (theme === "dark") {
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                viewBox="0 0 24 24"
+              >
+                <g fill="none">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13 3a1 1 0 1 0-2 0v1a1 1 0 1 0 2 0V3zM5.707 4.293a1 1 0 0 0-1.414 1.414l1 1a1 1 0 0 0 1.414-1.414l-1-1zm14 0a1 1 0 0 0-1.414 0l-1 1a1 1 0 0 0 1.414 1.414l1-1a1 1 0 0 0 0-1.414zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm-9 4a1 1 0 1 0 0 2h1a1 1 0 1 0 0-2H3zm17 0a1 1 0 1 0 0 2h1a1 1 0 1 0 0-2h-1zM6.707 18.707a1 1 0 1 0-1.414-1.414l-1 1a1 1 0 1 0 1.414 1.414l1-1zm12-1.414a1 1 0 0 0-1.414 1.414l1 1a1 1 0 0 0 1.414-1.414l-1-1zM13 20a1 1 0 1 0-2 0v1a1 1 0 1 0 2 0v-1z"
+                    fill="currentColor"
+                  />
+                </g>
+              </svg>
+            } @else {
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.353 3C5.849 4.408 3 7.463 3 11.47A9.53 9.53 0 0 0 12.53 21c4.007 0 7.062-2.849 8.47-6.353C8.17 17.065 8.14 8.14 9.353 3"
+                />
+              </svg>
+            }
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="menu px-10 py-2 md:hidden overflow-hidden transition-all duration-300 ease-out-in"
+      [ngClass]="
+        menuToggle
+          ? 'max-h-96 opacity-100 translate-y-0'
+          : 'max-h-0 opacity-0 -translate-y-2 pointer-events-none'
+      "
+    >
+      <ul class="navbar-title flex flex-col gap-3 text-base font-semibold">
+        <li class="m-1">
+          <a
+            href="#main"
+            class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105 fade-in"
+            (click)="closeMenu()"
+          >
+            {{ "navbar.inicio" | translate }}
+          </a>
+        </li>
+
+        <li class="m-1">
+          <a
+            href="#about"
+            class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
+            (click)="closeMenu()"
+          >
+            {{ "navbar.sobreMi" | translate }}
+          </a>
+        </li>
+
+        <li class="m-1">
+          <a
+            href="#projects"
+            class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
+            (click)="closeMenu()"
+          >
+            {{ "navbar.proyectos" | translate }}
+          </a>
+        </li>
+
+        <li class="m-1">
+          <a
+            href="#contact"
+            class="inline-block transition-transform duration-200 ease-in-out hover:text-[#f97316] hover:scale-105"
+            (click)="closeMenu()"
+          >
+            {{ "navbar.contacto" | translate }}
+          </a>
+        </li>
+      </ul>
     </div>
   </nav>
 
   <section
-    class="body h-full flex flex-col md:flex-row items-center justify-between px-28"
+    class="body h-full flex flex-row items-center justify-between py-8 px-18 xl:px-24"
   >
     <div class="greet w-full h-full flex flex-col justify-center">
-      <p class="text-6xl font-medium my-2">
+      <p class="text-5xl lg:text-6xl font-medium my-2">
         {{ "navbar.saludo" | translate }}
       </p>
 
-      <h1 class="text-6xl font-medium my-2">
+      <h1 class="text-5xl lg:text-6xl font-medium my-2">
         <span>
           {{ "navbar.textBody1" | translate }}
         </span>
-        <span class="text-[#f97316] text-6xl font-semibold">Kevin.</span>
+        <span class="text-[#f97316] text-5xl lg:text-6xl font-semibold">Kevin.</span>
       </h1>
 
       <h2 class="text-2xl font-medium my-2">
@@ -173,7 +244,9 @@
     </div>
 
     <div class="contact-icon relative h-full flex flex-row items-center justify-end">
-      <div class="w-full h-full flex items-center justify-center">
+      <div
+        class="img_profile w-full h-full hidden lg:flex items-center justify-center"
+      >
         <img
           src="../assets/pp.png"
           width="1280"
@@ -185,7 +258,7 @@
       <div
         class="absolute w-full h-full flex flex-col items-end justify-end gap-6 py-[10%]"
       >
-        <div class="w-full flex justify-end mx-3">
+        <div class="relative flex justify-end mx-3">
           <div class="w-px h-24 bg-[#f97316]"></div>
         </div>
 

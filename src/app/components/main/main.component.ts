@@ -22,6 +22,8 @@ export class MainComponent {
   @Input() language!: "es" | "en"
   @Input() theme!: "dark" | "light"
 
+  menuToggle = false
+
   @Output() languageToggle = new EventEmitter<void>()
   @Output() themeToggle = new EventEmitter<void>()
 
@@ -39,5 +41,14 @@ export class MainComponent {
   // Cambio de tema con animación
   toggleTheme(): void {
     this.themeToggle.emit()
+  }
+
+  // Toggle del menú
+  toggleMenu() {
+    this.menuToggle = !this.menuToggle
+  }
+
+  closeMenu() {
+    this.menuToggle = false
   }
 }
